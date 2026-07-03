@@ -4,20 +4,22 @@
 
 @layer base {
   :root {
-    --bg-primary: #f8fafc;
+    --bg-primary: #f1f5f9;
     --bg-secondary: #ffffff;
     --bg-card: #ffffff;
-    --text-primary: #0a0e1a;
+    --text-primary: #0f172a;
     --text-secondary: #334155;
+    --text-muted: #64748b;
     --border: #e2e8f0;
   }
 
   .dark {
-    --bg-primary: #0a0e1a;
-    --bg-secondary: #0f172a;
+    --bg-primary: #0f172a;
+    --bg-secondary: #1e293b;
     --bg-card: #1e293b;
-    --text-primary: #e2e8f0;
-    --text-secondary: #94a3b8;
+    --text-primary: #f1f5f9;
+    --text-secondary: #cbd5e1;
+    --text-muted: #94a3b8;
     --border: #334155;
   }
 
@@ -76,11 +78,11 @@
   }
 
   .skill-item {
-    @apply bg-accent/10 text-accent px-3 py-1 rounded-full text-sm;
+    @apply bg-accent/10 text-accent px-3 py-1 rounded-full text-sm font-medium;
   }
 
   .tag {
-    @apply bg-bg-primary px-2 py-1 rounded-full text-xs text-accent border border-border transition-colors duration-300;
+    @apply bg-bg-primary px-2.5 py-1 rounded-full text-xs text-accent border border-border transition-colors duration-300 font-medium;
   }
 
   .card-hover {

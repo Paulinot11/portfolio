@@ -1,4 +1,4 @@
-import { FaGraduationCap, FaPaperPlane, FaGithub, FaCode, FaAward } from 'react-icons/fa';
+import { FaGraduationCap, FaPaperPlane, FaGithub, FaCode, FaAward, FaLaptopCode } from 'react-icons/fa';
 import { personalInfo } from '../data/data';
 import photo from '../assets/photo.JPG';
 
@@ -16,60 +16,60 @@ const Hero = () => {
                                 className="w-full h-full object-cover"
                                 onError={(e) => {
                                     e.target.style.display = 'none';
-                                    e.target.parentElement.innerHTML = '<div className="w-full h-full bg-accent/20 flex items-center justify-center text-6xl text-accent">👨‍💻</div>';
+                                    e.target.parentElement.innerHTML = '<div className="w-full h-full bg-accent/20 flex items-center justify-center text-6xl text-accent"><FaCode /></div>';
                                 }}
                             />
                         </div>
                         <div className="absolute -bottom-2 -right-2 bg-accent rounded-full p-2 shadow-lg">
-                            <FaCode className="text-dark text-xl" />
+                            <FaLaptopCode className="text-dark text-xl" />
                         </div>
                     </div>
                 </div>
 
                 {/* Contenu */}
                 <div className="text-center max-w-3xl mx-auto">
-                    <h1 className="text-accent text-lg font-medium mb-2">
-                        👋 Bonjour, je suis
-                    </h1>
+                    <p className="text-accent text-lg font-medium mb-2">
+                        <FaCode className="inline mr-2" /> Bonjour, je suis
+                    </p>
                     <h1 className="text-4xl md:text-5xl lg:text-6xl font-extrabold leading-tight mb-4">
                         {personalInfo.nom} <br />
                         <span className="text-accent">{personalInfo.prenoms}</span>
                     </h1>
 
                     <div className="flex flex-wrap justify-center gap-3 mb-4">
-                        <span className="badge"><FaGraduationCap className="text-accent" /> L3 Informatique</span>
-                        <span className="badge"><span className="text-accent">🏫</span> ENI Fianarantsoa</span>
-                        <span className="badge"><span className="text-accent">💻</span> Fullstack</span>
-                        <span className="badge"><FaAward className="text-accent" /> Bac D - Mention Bien</span>
+                        <span className="badge"><FaGraduationCap className="text-accent mr-2" /> L3 Informatique</span>
+                        <span className="badge"><FaCode className="text-accent mr-2" /> ENI Fianarantsoa</span>
+                        <span className="badge"><FaLaptopCode className="text-accent mr-2" /> Fullstack</span>
+                        <span className="badge"><FaAward className="text-accent mr-2" /> Bac D - Mention Bien</span>
                     </div>
 
-                    <h2 className="text-xl md:text-2xl font-medium text-text-gray mb-6">
+                    <h2 className="text-xl md:text-2xl font-medium text-text-secondary mb-6">
                         Étudiant en <span className="bg-gradient-to-r from-accent to-emerald-400 bg-clip-text text-transparent font-bold">L3 Informatique</span>
                     </h2>
 
-                    <p className="text-text-gray mb-8 max-w-2xl mx-auto leading-relaxed">
+                    <p className="text-text-secondary mb-8 max-w-2xl mx-auto leading-relaxed">
                         {personalInfo.description}
                     </p>
 
                     <div className="flex flex-wrap gap-4 justify-center mb-6">
                         <a href="#contact" className="btn-primary">
-                            <FaPaperPlane /> Me contacter
+                            <FaPaperPlane className="mr-2" /> Me contacter
                         </a>
                         <a href={personalInfo.github} target="_blank" rel="noopener noreferrer" className="btn-outline">
-                            <FaGithub /> GitHub
+                            <FaGithub className="mr-2" /> GitHub
                         </a>
                     </div>
 
-                    <div className="flex flex-wrap justify-center gap-6 text-sm text-text-gray">
-                        <div>
+                    <div className="flex flex-wrap justify-center gap-6 text-sm">
+                        <div className="text-text-secondary">
                             <span className="block text-2xl font-bold text-accent">5+</span>
                             Projets
                         </div>
-                        <div>
+                        <div className="text-text-secondary">
                             <span className="block text-2xl font-bold text-accent">3</span>
                             Stages
                         </div>
-                        <div>
+                        <div className="text-text-secondary">
                             <span className="block text-2xl font-bold text-accent">8</span>
                             Technologies
                         </div>
