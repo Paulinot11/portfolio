@@ -1,4 +1,4 @@
-import { FaGraduationCap, FaPaperPlane, FaGithub, FaCode, FaAward, FaLaptopCode } from 'react-icons/fa';
+import { FaGraduationCap, FaPaperPlane, FaGithub, FaCode, FaAward, FaLaptopCode, FaDownload } from 'react-icons/fa';
 import { personalInfo } from '../data/data';
 import photo from '../assets/photo.JPG';
 
@@ -21,7 +21,7 @@ const Hero = () => {
                             />
                         </div>
                         <div className="absolute -bottom-2 -right-2 bg-accent rounded-full p-2 shadow-lg">
-                            <FaLaptopCode className="text-dark text-xl" />
+                            <FaLaptopCode className="text-dark dark:text-white text-xl" />
                         </div>
                     </div>
                 </div>
@@ -54,6 +54,9 @@ const Hero = () => {
                     <div className="flex flex-wrap gap-4 justify-center mb-6">
                         <a href="#contact" className="btn-primary">
                             <FaPaperPlane className="mr-2" /> Me contacter
+                        </a>
+                        <a href="/cv.pdf" download className="btn-outline">
+                            <FaDownload className="mr-2" /> Télécharger CV
                         </a>
                         <a href={personalInfo.github} target="_blank" rel="noopener noreferrer" className="btn-outline">
                             <FaGithub className="mr-2" /> GitHub

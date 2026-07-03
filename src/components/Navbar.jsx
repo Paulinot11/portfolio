@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { FaHome, FaCogs, FaFolderOpen, FaEnvelope } from 'react-icons/fa';
+import { FaHome, FaCogs, FaFolderOpen, FaEnvelope, FaSun, FaMoon } from 'react-icons/fa';
 import { useTheme } from '../context/ThemeContext';
 
 const Navbar = () => {
@@ -22,9 +22,9 @@ const Navbar = () => {
                     <li>
                         <button
                             onClick={toggleTheme}
-                            className="w-10 h-10 rounded-full bg-accent/10 text-accent hover:bg-accent hover:text-dark transition-all duration-300 flex items-center justify-center text-xl"
+                            className="w-10 h-10 rounded-full bg-accent/10 hover:bg-accent/20 transition-all duration-300 flex items-center justify-center text-xl text-text-primary dark:text-text-primary"
                         >
-                            {isDark ? '☀️' : '🌙'}
+                            {isDark ? <FaSun /> : <FaMoon />}
                         </button>
                     </li>
                 </ul>
@@ -34,9 +34,9 @@ const Navbar = () => {
                     className="md:hidden flex flex-col gap-1.5 cursor-pointer"
                     onClick={() => setIsOpen(!isOpen)}
                 >
-                    <span className={`w-7 h-0.5 bg-text-light transition-all duration-300 ${isOpen ? 'rotate-45 translate-y-2' : ''}`}></span>
-                    <span className={`w-7 h-0.5 bg-text-light transition-all duration-300 ${isOpen ? 'opacity-0' : ''}`}></span>
-                    <span className={`w-7 h-0.5 bg-text-light transition-all duration-300 ${isOpen ? '-rotate-45 -translate-y-2' : ''}`}></span>
+                    <span className={`w-7 h-0.5 bg-text-primary transition-all duration-300 ${isOpen ? 'rotate-45 translate-y-2' : ''}`}></span>
+                    <span className={`w-7 h-0.5 bg-text-primary transition-all duration-300 ${isOpen ? 'opacity-0' : ''}`}></span>
+                    <span className={`w-7 h-0.5 bg-text-primary transition-all duration-300 ${isOpen ? '-rotate-45 -translate-y-2' : ''}`}></span>
                 </button>
             </div>
 
@@ -50,9 +50,9 @@ const Navbar = () => {
                     <li>
                         <button
                             onClick={() => { toggleTheme(); setIsOpen(false); }}
-                            className="w-10 h-10 rounded-full bg-accent/10 text-accent hover:bg-accent hover:text-dark transition-all duration-300 flex items-center justify-center text-xl"
+                            className="w-10 h-10 rounded-full bg-accent/10 hover:bg-accent/20 transition-all duration-300 flex items-center justify-center text-xl text-text-primary dark:text-text-primary"
                         >
-                            {isDark ? '☀️' : '🌙'}
+                            {isDark ? <FaSun /> : <FaMoon />}
                         </button>
                     </li>
                 </ul>
